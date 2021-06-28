@@ -1,0 +1,20 @@
+﻿Build started...
+1>------ Publish started: Project: HPlusSportsAPI, Configuration: Release Any CPU ------
+HPlusSportsAPI -> C:\Users\johnm\Desktop\Azuredev\webapp\Ex_Files_Web_App_Microsoft_Azure\Exercise Files\CH02\01\Begin\HPlusSportsAPI\bin\Release\netcoreapp3.1\HPlusSportsAPI.dll
+HPlusSportsAPI -> C:\Users\johnm\Desktop\Azuredev\webapp\Ex_Files_Web_App_Microsoft_Azure\Exercise Files\CH02\01\Begin\HPlusSportsAPI\obj\Release\netcoreapp3.1\PubTmp\Out\
+Updating file (HPlusSportsAPI203\web.config).
+Publish Succeeded.
+Web App was published successfully https://hplussportsapi203.azurewebsites.net/
+========== Build: 0 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========
+========== Publish: 1 succeeded, 0 failed, 0 skipped ==========
+Starting to update your API
+Generating swagger file to 'C:\Users\johnm\Desktop\Azuredev\webapp\Ex_Files_Web_App_Microsoft_Azure\Exercise Files\CH02\01\Begin\HPlusSportsAPI\bin\Release\netcoreapp3.1\swagger.json'.
+Failed to generate swagger file. Error dotnet swagger tofile --serializeasv2 --output "C:\Users\johnm\Desktop\Azuredev\webapp\Ex_Files_Web_App_Microsoft_Azure\Exercise Files\CH02\01\Begin\HPlusSportsAPI\bin\Release\netcoreapp3.1\swagger.json" "C:\Users\johnm\Desktop\Azuredev\webapp\Ex_Files_Web_App_Microsoft_Azure\Exercise Files\CH02\01\Begin\HPlusSportsAPI\bin\Release\netcoreapp3.1\HPlusSportsAPI.dll" v1
+
+Unhandled exception. System.IO.FileLoadException: Could not load file or assembly 'System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The located assembly's manifest definition does not match the assembly reference. (0x80131040)
+File name: 'System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+
+
+
+Be sure that the Startup.cs for your application is calling AddSwaggerGen from within ConfigureServices in order to generate swagger file. Visit https://go.microsoft.com/fwlink/?LinkId=2131205&CLCID=0x409 for more information.

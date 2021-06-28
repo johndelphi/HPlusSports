@@ -25,18 +25,19 @@ namespace HPlusSportsAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            
             services.AddSwaggerGen(c => 
             {
-                c.SwaggerDoc("v1", new OpenApiInfo
+                c.SwaggerDoc("V1", new OpenApiInfo
                 {
-                    Title = "Hplus API",
+                    Title = "HPlusSports API",
                     Version = "1.0",
-                    Description = "product Api for Hplus"
+                    Description = "Product API for HPlusSports"
 
 
                 });
             } );
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +50,8 @@ namespace HPlusSportsAPI
             app.UseSwagger();
             app.UseSwaggerUI(C =>
             {
-                C.SwaggerEndpoint("/swagger/v1/swagger.json", "Hplus sports");
+                C.SwaggerEndpoint("/swagger/V1/swagger.json", 
+                    "HPlus Sports");
             });
             app.UseHttpsRedirection();
 

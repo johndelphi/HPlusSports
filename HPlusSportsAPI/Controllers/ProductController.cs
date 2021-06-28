@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace HPlusSportsApi.Controllers
 {
@@ -24,7 +21,7 @@ namespace HPlusSportsApi.Controllers
 
         private static List<Models.Product> GetProducts()
         {
-            var serializer = JsonSerializer.CreateDefault();
+            var serializer = Newtonsoft.Json.JsonSerializer.CreateDefault();
             var textReader = new StringReader(@"[
     {
         'id': '259',
